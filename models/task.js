@@ -16,6 +16,9 @@ class Task {
     this.isFavorite = isFavorite;
     this.repeatingDays = repeatingDays;
     this.color = color;
+
+    const createdAt = new Date();
+    this.createdAt = createdAt.toISOString();
   }
 
   save() {
