@@ -2,12 +2,20 @@ const { getDb } = require("../utils/db");
 const mongodb = require("mongodb");
 
 class Task {
-  constructor({ description, dueDate, isArchived, isFavorite, repeatingDays }) {
+  constructor({
+    description,
+    dueDate,
+    color,
+    isArchived,
+    isFavorite,
+    repeatingDays,
+  }) {
     this.description = description;
     this.dueDate = dueDate;
     this.isArchived = isArchived;
     this.isFavorite = isFavorite;
     this.repeatingDays = repeatingDays;
+    this.color = color;
   }
 
   save() {
